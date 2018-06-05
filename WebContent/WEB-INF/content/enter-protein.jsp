@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Enter protein</title>
 </head>
 <body>
 	<h1>Enter Protein</h1>
@@ -17,8 +17,9 @@
 	Last amount entered: <s:property value="enteredProtein" />
 	</div>
 	<div>Total : <s:property value="proteinData.total" /> grams today</div>
-	<div><s:property value="goalText"/><s:property value="proteinData.goal" /></div>
-	<s:if test="%{proteinData.total >= proteinData.gaol}"  />
-		<s:property value="resetTotal()" />
+	<div><s:text name="goal.text"/><s:property value="proteinData.goal" /></div>
+	<s:if test="%{proteinData.total >= proteinData.gaol}"  >
+		<s:property value="resetTotal()" /></s:if>
+	<a href="<s:url action="enter-goal" />" >Edit Goal</a>
 </body>
 </html>

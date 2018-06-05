@@ -50,11 +50,6 @@ public class EnterProtein extends ActionSupport implements SessionAware {
 		this.enteredProtein = enteredProtein;
 	}
 	
-	public String getGoalText() {
-		// look into properties
-		return getText("goal.text");
-	}
-	
 	public ProteinData getProteinData() {
 		return proteinData;
 	}
